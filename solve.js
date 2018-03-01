@@ -1,8 +1,11 @@
-const debug = require('debug')('solve')
-const _ = require('lodash')
-const gridUtils = require('./grid-utils')
+const debug = require("debug")("solve");
+const _ = require("lodash");
+const gridUtils = require("./grid-utils");
 
-const { sortRides } = require('./sort')
+const { sortRides } = require("./sort");
+const takeRide = require("./take-ride");
+const hasEnoughTime = require("./has-enough-time");
+const ridesAvailable = require("./rides-available");
 
 /**
  * @typedef {object} Ride
@@ -31,46 +34,32 @@ const { sortRides } = require('./sort')
 function solve(problem) {
   // destructure this!
 
-  let { rides, nvehicules } = problem
+  let { rides, nvehicules, nsteps } = problem;
 
-  let time = 0
+  let time = 0;
 
-  rides = sortRides(rides)
+  rides = sortRides(rides);
 
   let vehicules = _.range(0, nvehicules).map(index => ({
     id: index,
     x: 0,
     y: 0,
-    time: 0
-  }))
+    time: 0,
+    rides: []
+  }));
 
-  let solution = vehicules.map(() => [])
+  let v1 = vehicules[1];
 
-  let v1 = vehicules[1]
-
-  while ((ridesAvailables = ridesAvailables(v1, rides))) {
-    ridesAvailables = sortRides(v1, ridesAvailables)
-    let ride = ridesAvailables[0]
-    v1 = takeRide(v1, ride)
-    _.pull(rides, ride)
+  while ((available = ridesAvailable(v1, rides, nsteps))) {
+    available = sortRides(v1, available);
+    let ride = available[0];
+    v1 = takeRide(v1, ride);
+    _.pull(rides, ride);
   }
 
-  /*vehicules.forEach(v => {
+  let solution = [v1.rides];
 
-	})*/
-
-  /*while (rides.length > 0) {
-    vehicules.forEach((v, i) => {
-      if (rides.length > 0) {
-        solution[i].push(rides.pop().index);
-      }
-    });
-  }*/
-
-  /*let solution = vehicules.map(
-    (v, index) => (index < rides.length ? [index] : [])
-  );*/
-  return solution
+  return solution;
 }
 
-module.exports = solve
+module.exports = solve;

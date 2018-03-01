@@ -4,9 +4,10 @@ const _ = require("lodash");
 
 const { distanceVR } = require("./distance");
 
-module.exports = function hasEnoughTime(time, vehicule, ride, nsteps) {
+module.exports = function hasEnoughTime(vehicule, ride, nsteps) {
   return (
-    time + distanceVR(vehicule, ride) + ride.distance <=
+    Math.max(vehicule.time + distanceVR(vehicule, ride), ride.start) +
+      ride.distance <=
     Math.min(ride.finish, nsteps - 1)
   );
 };
