@@ -15,6 +15,7 @@ const gridUtils = require('./grid-utils')
  * @typedef {object} Problem
  * @property {number} nrows
  * @property {number} ncolumns
+ * @property {number} nvehicules
  * @property {number} nbonus
  * @property {number} nsteps
  * @property {Ride[]} rides
