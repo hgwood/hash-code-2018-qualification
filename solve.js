@@ -43,9 +43,19 @@ function solve(problem) {
     y: 0
   }));
 
-  let solution = vehicules.map(
+  let solution = vehicules.map(() => []);
+
+  while (rides.length > 0) {
+    vehicules.forEach((v, i) => {
+      if (rides.length > 0) {
+        solution[i].push(rides.pop().index);
+      }
+    });
+  }
+
+  /*let solution = vehicules.map(
     (v, index) => (index < rides.length ? [index] : [])
-  );
+  );*/
   return solution;
 }
 
