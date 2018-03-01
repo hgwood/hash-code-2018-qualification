@@ -62,6 +62,7 @@ function solve(problem) {
       available = sortRides(available, nrides);
       let ride = available[0];
       vehicule = takeRide(vehicule, ride);
+      vehicules[vehicule.id] = vehicule;
       _.remove(rides, r1 => r1.index == ride.index);
     } else {
       vehicule.finish = true;
