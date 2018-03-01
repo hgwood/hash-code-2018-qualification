@@ -1,0 +1,42 @@
+{
+  "id": "4868850726207488",
+  "name": "Online Qualification Round",
+  "problemBlobKey": "blob/AMIfv94Lms0V2HZqoVdlt1kZXg_rvYZX6Qqvj9_Lh7HdwN-h9lLfLSPNz-sZ97HGOOMG67iovFjpWf6Rp5Qv0K_3Gdd-qTC_2ip2VVaTn-YLCz6LRXbHR3MMT43nAwq3bc3BaoXx93Z4Z_2Onstp7SqjjOMm4e-XQx_BdGSrUN6-gFEQb1MQpyxyeqaf82225FwlAWhh7kTQwvp-q3lNOLxFBgIjkBZT_gGpI_HayuPros7vHwOtnZCJNSs5AoweOH-L_9lt0quLya_fkWFEo1Yt_K-w1UBgNt4f_b4cxXqSTQsn-bWdc0rkvs7MxJyCVEjloMtA5HmdJ5EXItFoCmqEAQSX_bGTS_nwW68Yi-8u9FN-NjpV-_92eY33JhSUJHyk43IttjqY474JUf2yAMLu0M-wOb9ryhuo4TLkF6LN-mbbJxGGfrk",
+  "scorerLabel": "wheel",
+  "visualization": "wheel",
+  "hideScoreboard": false,
+  "finalistOnly": false,
+  "adminOnly": false,
+  "active": true,
+  "start": "2018-03-01T17:45:00.000Z",
+  "end": "2018-03-01T21:30:00.000Z",
+  "freezeStart": "2018-03-01T20:30:00.000Z",
+  "freezeEnd": "2018-03-05T17:00:00.000Z",
+  "dataSets": [
+    {
+      "id": "6294083546906624",
+      "name": "A - example",
+      "inputBlobKey": "blob/AMIfv96WQC8K5eGTuFcqFR-IZBkwGeorajP-1QXKqUrlOk8Dbw2DsqmQn_Tgsit5zo-kdlA3hQyUpm7u7t_kF7C6fNTnB5ei5u1mbT9EWpNUhU8A0Q9-aTbNUqbfsaPljRKDA5VsVZsRXUbX6fOGqBTL6i0PA_70b3YM0q9dFIX-NvJfwZ5q_H71cE5zCLQcNwoGx-QS5up7mtvCfy_R21X0jGRVQn_1iSGMU0KlwRXC35MbaQFaXnOG-PO87vG4N4L0tBfuGYL9KEZngRKTeOVLa6YEuLeGVL7e6nrRVrdpDlXoS1tm3djR9HQdnbuQDkPToLzZ4nwM4heyThPoYpZAtWq26JfOsRTiRfLcKzhUh7DOYGvzL6SCJW_fohFkTokjJvTbhtKd76GbNhEQEGcL_Y1ngzF3bkKUh6N1RCnZ6vHOdXBlnU8"
+    },
+    {
+      "id": "5937418188357632",
+      "name": "B - should be easy",
+      "inputBlobKey": "blob/AMIfv95CeMZorz_EX_gV9MWDd-xK5YP_LTTi9y0S7AKXVVGTCMqhMk4Mez17WdoNRuSAZX70UX7hFPSuGilpshgIa8btFsxCxBcX3HDHy4AFK2NQzPtKUslRAAvcLDyox_gqGCywCDOx2omHjoyzn9yEC94MZPWFt7kDlVtyOezmSv75QEX3wewFJm1ddTw31yiOSZsoGulZ59iByHDq1o8OmbnFeRh9lWyT-AS8EnohumSjvLpwFCe5zV522llh6F4lptgXyWkDjDggjzSEuxz4QikSuQUk-_Pq1M66Mvb13_PMDNHg1nzKMIEO8kGtEE6RMze4rRZJR-tZ49o3LkjcU9xmMuMdC3IfSP9YpuxAeBHP9oHykpg3ggg8VnhG8pMwG2kRlII9fOTleB-1S2WyvQkxZe4joaTJeXpXAFIVmDvCIsfKR8k"
+    },
+    {
+      "id": "4886708663353344",
+      "name": "C - no hurry",
+      "inputBlobKey": "blob/AMIfv97LJhJSkoPbIYQYuJ5Nh7jp92VC3-2Z9s_9TIJ0DMXsJDTcFhUPNpMYY8Rz0-0P82sgZ_qol8sVey1rzhs2ZXcktxFSjoS1oW5vf6LouspmhdetAOHA9qCgsseWKI_nM3Wth64cSUlrRv8ufsaFoVBDa4RiQRtTa8FUmsHAOMLCktYtFbdzZV-EzGStOysxGZ2iDsftVM2SzqyJSyQVprIfHEYu9gDCC6w8dbllFYT2A4KpAvymdgG_-VNUTzYc0LGNPklNDHa3d1vwAnwk0AQPWPBkoE6e0ZIL4tFKW3UxvOnefqfjicG7n9qOsa1P-RmoKtKTbMXbGecirMguf3uhR2eppUE6KGqcPjAFa_SEn_0ZEEuE-ECgbWi-PdeKMdbfhSd7"
+    },
+    {
+      "id": "6752035777019904",
+      "name": "D - metropolis",
+      "inputBlobKey": "blob/AMIfv97jZHABKxRt5vHAAJxaycMnlkZ9HRBXxToDtKuF8FlUOqaaVfqcbZXYDM6kTJ_HNyQ-mobCHOqOJ3B8W7m6uZLFh7M_fvqVJLc5R1hQVNiPeI2vyB_Q8aeO5mo0Siwsl-QctwdH3nXczV3AiTkatF4FiBSneCQnBdlPv-hFnZL69BlWyRPpkfkpCgvfQX-BIwCr-zcpCPNSAjR9sZSI9-Umj9MYhVBsPwGY177gCm9TWnti5z1wiWNNesAKA3v-rxa8DOjQSJLD86VgRyktRZ_g4llCBetUzqpURJ-Ut7sVn-q1sjNlYwlfLbwEK7IgNdlxdHnqOWbwnRg1naJ8ifPzvmrR95HkW7bgh1e_gu4MCtkhocaw_m-xYiiJDZghtGMELU2chSifAQS6cKjcgSuMwnzUx_8If6XykL-9R9slYQJM_PY"
+    },
+    {
+      "id": "6449544720023552",
+      "name": "E - high bonus",
+      "inputBlobKey": "blob/AMIfv9637eu1qvB3NEGXPHTgXp6QitVfXsIv-57uXJum87zsYnncp3WkXGtV5RaaXuLafGkEpNYT5aAHKsMDlKS9ElUgGh-3iXmAOxPpUEZZbIv_6dUiS2hWG6xqFcAtHCU7e8iT8tm8RW627WrzTev0tUYuz8J6_VEdeghK6uOhXGHV-X39WFg_nYMtIwJWrbOLrRh_sm4ZAtF_zzCxFGxSBHNJLHDzTjNdG43A2enD6TLjNSoVeYI3DZGOMbBwWbhFFawsrejHJ6G26vjn5UVjTtG6ehObQhYbx2ZChReb7ecRTr-scscRTgrVFK3ZFq_z8w2wlHlQVhCjPY1Ve-zCWDBsOpLVnyYxHx_3mMis0ioXovFEnaM5_1h2xDATZAKdxtKSmoSa4DXFXKAGNOprNa5nd6Xi2VgbowmmhwgjABJFlqrCkdM"
+    }
+  ]
+}

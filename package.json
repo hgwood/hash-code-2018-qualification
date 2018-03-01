@@ -20,7 +20,28 @@
     "input3": "cross-env npm start ${npm_package_config_input3_name}.in.txt",
     "input4": "cross-env npm start ${npm_package_config_input4_name}.in.txt"
   },
-  "config": {},
+  "config": {
+    "input1": {
+      "id": "6294083546906624",
+      "name": "a-example"
+    },
+    "input2": {
+      "id": "5937418188357632",
+      "name": "b-should-be-easy"
+    },
+    "input3": {
+      "id": "4886708663353344",
+      "name": "c-no-hurry"
+    },
+    "input4": {
+      "id": "6752035777019904",
+      "name": "d-metropolis"
+    },
+    "input5": {
+      "id": "6449544720023552",
+      "name": "e-high-bonus"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hgwood/hash-code-2018-training.git"
