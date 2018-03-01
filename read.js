@@ -30,7 +30,7 @@ const parse = inputText => {
     save(),
     "nbonus",
     "nsteps",
-    n("rides", "ox", "oy", "dx", "dy", "start", "finish")
+    n("rides", { indices: true }, "ox", "oy", "dx", "dy", "start", "finish")
   ]);
   const { parsedValue, remaining } = parse(inputText);
   assert.equal(remaining.trim(), "");
