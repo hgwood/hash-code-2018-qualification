@@ -1,4 +1,4 @@
-const _ = require("lodash/fp");
+const _ = require("lodash");
 const fs = require("fs");
 const debug = require("debug")("write");
 
@@ -11,6 +11,11 @@ function writeLines(path, lines) {
   debug(`wrote ${lines.length} lines to ${path}`);
 }
 
-const unparse = _.constant([]);
+const unparse = function(vehicules) {
+  return _.map(
+    vehicules,
+    vehicule => `${vehicule.length} ${vehicule.join(" ")}`
+  );
+};
 
 module.exports.unparse = unparse;
