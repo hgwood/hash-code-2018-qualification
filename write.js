@@ -26,7 +26,7 @@ module.exports = function write(path, solution, problem) {
   );
   debug("on number of rides:", nridesHonored / nridesRequested * 100);
   debug("on distance:", ridesHonoredDistance, ridesRequestedDistance * 100);
-  debug("rides missed", nridesRequested - ridesHonored);
+  debug("rides missed", nridesRequested - nridesHonored);
 };
 
 function writeLines(path, lines) {
