@@ -3,6 +3,7 @@ const assert = require("assert");
 const debug = require("debug")("read");
 const fs = require("fs");
 const jolicitron = require("jolicitron");
+const computeDistance = require("./distance");
 
 module.exports = function read(filePath) {
   const cachedFile = `${filePath.split(".")[0]}.in.json`;
@@ -33,7 +34,13 @@ const parse = inputText => {
   ]);
   const { parsedValue, remaining } = parse(inputText);
   assert.equal(remaining.trim(), "");
-  debug("end");
+  debug("end parsing");
+  parsedValue.rides = _.map(ride => {
+    return Object.assign(ride, {
+      distance: computeDistance(ride.ox, ride.oy, ride.dx, ride.dy)
+    });
+  }, parsedValue.rides);
+  debug("end computing distances");
   return parsedValue;
 };
 

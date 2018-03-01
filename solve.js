@@ -10,6 +10,7 @@ const gridUtils = require("./grid-utils");
  * @property {number} dy
  * @property {number} start
  * @property {number} finish
+ * @property {number} distance
  *
  * @typedef {object} Problem
  * @property {number} nrows
