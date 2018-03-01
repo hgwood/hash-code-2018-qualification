@@ -2,8 +2,8 @@ const assert = require("assert");
 const debug = require("debug")("sort");
 const _ = require("lodash");
 
-function sortRides(rides, nrides) {
-  if (nrides > 30000) {
+function sortRides(rides, nrides, time) {
+  if (time > 30000) {
     rides = _.orderBy(rides, ["distance"], ["desc"]);
     min = _.min(rides, "distance");
     rides = rides.filter(r => r.distance == min.distance);

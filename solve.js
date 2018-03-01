@@ -63,7 +63,7 @@ function solve(problem) {
 
     let available = ridesAvailable(vehicule, rides, nsteps);
     if (available) {
-      available = sortRides(available, nrides);
+      available = sortRides(available, nrides, vehicule.time);
       let ride = available[0];
       vehicule = takeRide(vehicule, ride);
       vehicules[vehicule.id] = vehicule;
