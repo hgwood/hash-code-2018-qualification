@@ -49,15 +49,16 @@ function solve(problem) {
   }));
 
   let v1 = vehicules[1];
+  let solution = vehicules.map(vehicule => {
+    while ((available = ridesAvailable(vehicule, rides, nsteps))) {
+      available = sortRides(available);
+      let ride = available[0];
+      vehicule = takeRide(vehicule, ride);
+      _.pull(rides, ride);
+    }
 
-  while ((available = ridesAvailable(v1, rides, nsteps))) {
-    available = sortRides(available);
-    let ride = available[0];
-    v1 = takeRide(v1, ride);
-    _.pull(rides, ride);
-  }
-
-  let solution = [v1.rides];
+    return vehicule.rides;
+  });
 
   return solution;
 }
