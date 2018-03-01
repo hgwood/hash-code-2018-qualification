@@ -3,7 +3,7 @@ const assert = require("assert");
 const debug = require("debug")("read");
 const fs = require("fs");
 const jolicitron = require("jolicitron");
-const computeDistance = require("./distance");
+const { distance: computeDistance } = require("./distance");
 
 module.exports = function read(filePath) {
   const cachedFile = `${filePath.split(".")[0]}.in.json`;
@@ -30,7 +30,7 @@ const parse = inputText => {
     save(),
     "nbonus",
     "nsteps",
-    n("rides", "ox", "oy", "dx", "dy", "start", "finish")
+    n("rides", { indices: true }, "ox", "oy", "dx", "dy", "start", "finish")
   ]);
   const { parsedValue, remaining } = parse(inputText);
   assert.equal(remaining.trim(), "");
