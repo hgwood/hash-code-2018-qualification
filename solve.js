@@ -49,10 +49,10 @@ function solve(problem) {
     rides: []
   }));
 
-  vehicules = vehicules.map(v => {
+  /*vehicules = vehicules.map(v => {
     ride = rides.pop();
     return takeRide(v, ride);
-  });
+  });*/
 
   while (rides.length > 0) {
     unfinished = vehicules.filter(v => !v.finish);
