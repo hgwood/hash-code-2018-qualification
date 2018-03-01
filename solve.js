@@ -2,6 +2,8 @@ const debug = require("debug")("solve");
 const _ = require("lodash");
 const gridUtils = require("./grid-utils");
 
+const { sortRides } = require("./sort");
+
 /**
  * @typedef {object} Ride
  * @property {number} ox
@@ -29,9 +31,11 @@ const gridUtils = require("./grid-utils");
 function solve(problem) {
   // destructure this!
 
-  const { rides, nvehicules } = problem;
+  let { rides, nvehicules } = problem;
 
   let time = 0;
+
+  rides = sortRides(rides);
 
   let vehicules = _.range(0, nvehicules).map(index => ({
     id: index,
