@@ -39,7 +39,9 @@ function solve(problem) {
     y: 0
   }));
 
-  let solution = vehicules.map(v => (rides.length > 0 ? [rides.pop()] : []));
+  let solution = vehicules.map(
+    (v, index) => (index < rides.length ? [index] : [])
+  );
   return solution;
 }
 
