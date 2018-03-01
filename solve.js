@@ -45,19 +45,30 @@ function solve(problem) {
     x: 0,
     y: 0,
     time: 0,
+    finish: false,
     rides: []
   }));
 
-  let solution = vehicules.map(vehicule => {
-    while ((available = ridesAvailable(vehicule, rides, nsteps))) {
+  while (rides.length > 0) {
+    unfinished = vehicules.filter(v => !v.finish);
+
+    if (unfinished.length == 0) break;
+
+    vehicule = _.minBy(unfinished, "time");
+
+    let available = ridesAvailable(vehicule, rides, nsteps);
+
+    if (available) {
       available = sortRides(available, nrides);
       let ride = available[0];
       vehicule = takeRide(vehicule, ride);
       _.remove(rides, r1 => r1.index == ride.index);
+    } else {
+      vehicule.finish = true;
     }
+  }
 
-    return vehicule.rides;
-  });
+  let solution = vehicules.map(v => v.rides);
 
   return solution;
 }
