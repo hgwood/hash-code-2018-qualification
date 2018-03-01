@@ -36,6 +36,8 @@ function solve(problem) {
 
   let { rides, nvehicules, nsteps } = problem;
 
+  let nrides = rides.length;
+
   let time = 0;
 
   rides = sortRides(rides);
@@ -51,7 +53,7 @@ function solve(problem) {
   let v1 = vehicules[1];
   let solution = vehicules.map(vehicule => {
     while ((available = ridesAvailable(vehicule, rides, nsteps))) {
-      available = sortRides(available);
+      available = sortRides(available, nrides);
       let ride = available[0];
       vehicule = takeRide(vehicule, ride);
       _.pull(rides, ride);
