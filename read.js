@@ -23,7 +23,13 @@ module.exports = function read(filePath) {
 
 const parse = inputText => {
   const parse = jolicitron((save, n) => [
-
+    "nrows",
+    "ncolumns",
+    "nvehicules",
+    save(),
+    "nbonus",
+    "nsteps",
+    n("rides", "ox", "oy", "dx", "dy", "start", "finish")
   ]);
   const { parsedValue, remaining } = parse(inputText);
   assert.equal(remaining.trim(), "");
