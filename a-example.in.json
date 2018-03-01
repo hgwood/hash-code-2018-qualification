@@ -1,1 +1,39 @@
-{"nrows":3,"ncolumns":4,"nvehicules":2,"nbonus":2,"nsteps":10,"rides":[{"index":0,"ox":0,"oy":0,"dx":1,"dy":3,"start":2,"finish":9,"distance":4},{"index":1,"ox":1,"oy":2,"dx":1,"dy":0,"start":0,"finish":9,"distance":2},{"index":2,"ox":2,"oy":0,"dx":2,"dy":2,"start":0,"finish":9,"distance":2}]}
+{
+  "nrows": 3,
+  "ncolumns": 4,
+  "nvehicules": 2,
+  "nbonus": 2,
+  "nsteps": 10,
+  "rides": [
+    {
+      "index": 0,
+      "ox": 0,
+      "oy": 0,
+      "dx": 1,
+      "dy": 3,
+      "start": 2,
+      "finish": 9,
+      "distance": 4
+    },
+    {
+      "index": 1,
+      "ox": 1,
+      "oy": 2,
+      "dx": 1,
+      "dy": 0,
+      "start": 0,
+      "finish": 9,
+      "distance": 2
+    },
+    {
+      "index": 2,
+      "ox": 2,
+      "oy": 0,
+      "dx": 2,
+      "dy": 2,
+      "start": 0,
+      "finish": 9,
+      "distance": 2
+    }
+  ]
+}

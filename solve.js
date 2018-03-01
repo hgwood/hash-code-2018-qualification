@@ -62,7 +62,6 @@ function solve(problem) {
     vehicule = _.minBy(unfinished, "time");
 
     let available = ridesAvailable(vehicule, rides, nsteps);
-    debug(available);
     if (available) {
       available = sortRides(available, nrides);
       let ride = available[0];
