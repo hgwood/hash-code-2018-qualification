@@ -4,11 +4,29 @@ const debug = require("debug")("write");
 
 module.exports = function write(path, solution, problem) {
   writeLines(path, unparse(solution));
-  const ridesHonored = _.flatten(solution).length;
-  const ridesRequested = problem.rides.length;
-  debug("rides honored", ridesHonored);
-  debug("rides requested", ridesRequested);
-  debug("rides missed", ridesRequested - ridesHonored);
+  const ridesHonored = _.flatten(solution);
+  const nridesHonored = ridesHonored.length;
+  const ridesHonoredDistance = _.sumBy(
+    _.at(problem.rides, ridesHonored),
+    "distance"
+  );
+  const nridesRequested = problem.rides.length;
+  const ridesRequestedDistance = _.sumBy(problem.rides, "distance");
+  debug(
+    "rides honored",
+    nridesHonored,
+    "for a total distance of",
+    ridesHonoredDistance
+  );
+  debug(
+    "rides requested",
+    nridesRequested,
+    "for a total distance of",
+    ridesRequestedDistance
+  );
+  debug("on number of rides:", nridesHonored / nridesRequested * 100);
+  debug("on distance:", ridesHonoredDistance, ridesRequestedDistance * 100);
+  debug("rides missed", nridesRequested - ridesHonored);
 };
 
 function writeLines(path, lines) {
