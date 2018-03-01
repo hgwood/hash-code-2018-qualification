@@ -1,6 +1,6 @@
-const debug = require("debug")("solve");
-const _ = require("lodash");
-const gridUtils = require("./grid-utils");
+const debug = require('debug')('solve')
+const _ = require('lodash')
+const gridUtils = require('./grid-utils')
 
 /**
  * @typedef {object} Ride
@@ -25,8 +25,22 @@ const gridUtils = require("./grid-utils");
  * @param {Problem} problem
  * @returns {Solution[]}
  */
-function solve(problem) { // destructure this!
-  return [[1,2],[3,4]];
+function solve(problem) {
+  // destructure this!
+
+  const { rides, nVehicules } = problem
+
+  let time = 0
+
+  let vehicules = _.range(0, nVehicules).map(index => ({
+    id: index,
+    x: 0,
+    y: 0
+  }))
+
+  let solution = vehicules.map(v => [rides.pop()])
+
+  return solution
 }
 
-module.exports = solve;
+module.exports = solve
