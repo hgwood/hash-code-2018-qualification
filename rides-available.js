@@ -17,7 +17,5 @@ module.exports = function ridesAvailable(vehicule, rides, nsteps) {
 
   rides = rides.filter(r => hasEnoughTime(vehicule, r, nsteps));
 
-  rides = rides.filter(r => r.distance <= 1000);
-
   return rides.length > 0 ? rides : false;
 };
