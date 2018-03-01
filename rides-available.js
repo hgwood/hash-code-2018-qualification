@@ -6,9 +6,12 @@ const { distanceVR } = require("./distance");
 const hasEnoughTime = require("./has-enough-time");
 
 module.exports = function ridesAvailable(vehicule, rides, nsteps) {
-  rides = rides.map(r =>
-    Object.assign({ distanceToV: distanceVR(vehicule, r) }, r)
-  );
+  rides = rides.map(r => {
+    {
+      let ride = Object.assign({ distanceToV: distanceVR(vehicule, r) }, r);
+      return ride;
+    }
+  });
 
   rides = rides.filter(r => r.finish >= vehicule.time);
 

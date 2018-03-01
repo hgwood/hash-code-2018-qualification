@@ -40,8 +40,6 @@ function solve(problem) {
 
   let time = 0;
 
-  rides = sortRides(rides);
-
   let vehicules = _.range(0, nvehicules).map(index => ({
     id: index,
     x: 0,
@@ -50,7 +48,6 @@ function solve(problem) {
     rides: []
   }));
 
-  let v1 = vehicules[1];
   let solution = vehicules.map(vehicule => {
     while ((available = ridesAvailable(vehicule, rides, nsteps))) {
       available = sortRides(available, nrides);
