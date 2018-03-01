@@ -2,8 +2,13 @@ const _ = require("lodash");
 const fs = require("fs");
 const debug = require("debug")("write");
 
-module.exports = function write(path, solution) {
+module.exports = function write(path, solution, problem) {
   writeLines(path, unparse(solution));
+  const ridesHonored = _.flatten(solution).length;
+  const ridesRequested = problem.rides.length;
+  debug("rides honored", ridesHonored);
+  debug("rides requested", ridesRequested);
+  debug("rides missed", ridesRequested - ridesHonored);
 };
 
 function writeLines(path, lines) {
