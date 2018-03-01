@@ -4,7 +4,7 @@ const _ = require("lodash");
 
 function sortRides(rides, nrides) {
   if (nrides > 30000) {
-    rides = _.orderBy(rides, ["distance"], ["asc"]);
+    rides = _.orderBy(rides, ["distance"], ["desc"]);
     min = _.min(rides, "distance");
     rides = rides.filter(r => r.distance == min.distance);
     return _.orderBy(rides, ["distanceToV", "start"], ["asc", "asc"]);
