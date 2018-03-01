@@ -3,10 +3,17 @@ const debug = require("debug")("sort");
 const _ = require("lodash");
 
 function sortRides(rides, nrides) {
-  rides = _.orderBy(rides, ["distanceToV"], ["asc"]);
-  min = _.min(rides, "distanceToV");
-  rides = rides.filter(r => r.distanceToV == min.distanceToV);
-  return _.orderBy(rides, ["start", "distance"], ["asc", "desc"]);
+  if (nrides > 30000) {
+    rides = _.orderBy(rides, ["distance"], ["asc"]);
+    min = _.min(rides, "distance");
+    rides = rides.filter(r => r.distance == min.distance);
+    return _.orderBy(rides, ["distanceToV", "start"], ["asc", "asc"]);
+  } else {
+    rides = _.orderBy(rides, ["distanceToV"], ["asc"]);
+    min = _.min(rides, "distanceToV");
+    rides = rides.filter(r => r.distanceToV == min.distanceToV);
+    return _.orderBy(rides, ["start", "distance"], ["asc", "desc"]);
+  }
   /*return _(rides)
     .orderBy(["distanceToV"], ["asc"])
     .take(Math.max(100, nrides / 10))
