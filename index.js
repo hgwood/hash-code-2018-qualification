@@ -19,6 +19,11 @@ if (_.isEmpty(files)) console.warn("No input files given.");
 
 _.each(files, function(file) {
   const problem = read(file);
-  const solution = solve(problem);
-  write(path.join(solutionDir, `${file.split(".")[0]}.out.txt`), solution);
+  const problemCopy = _.cloneDeep(problem);
+  const solution = solve(problemCopy);
+  write(
+    path.join(solutionDir, `${file.split(".")[0]}.out.txt`),
+    solution,
+    problem
+  );
 });
