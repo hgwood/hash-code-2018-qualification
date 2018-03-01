@@ -53,7 +53,7 @@ function solve(problem) {
       available = sortRides(available, nrides);
       let ride = available[0];
       vehicule = takeRide(vehicule, ride);
-      _.pull(rides, ride);
+      _.remove(rides, r1 => r1.index == ride.index);
     }
 
     return vehicule.rides;
